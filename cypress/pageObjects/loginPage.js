@@ -95,7 +95,6 @@ class LoginPage{
   }
   loginClickButtonOnSFUI(){
     cy.get('#ext-gen30').click();
-    console.log(cy.url().should('include', mockData.SFDashboard));
 
 }
 }
