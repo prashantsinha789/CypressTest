@@ -25,3 +25,5 @@ module.exports.ldapServiceUsername="cn=admin,dc=example,dc=org";
 module.exports.ldapbasedn="ou=Users,dc=example,dc=org";
 module.exports.ldapFilter="(&(objectClass=person)(uid=STARFISH_USERNAME))";
 module.exports.localLoginStrategy="com.starfish.officehours.controller.security.LdapLocalLoginStrategy";
+
+module.exports.SFDashboard="tenantId=4";
