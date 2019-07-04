@@ -2,6 +2,7 @@ import {login} from "../pageObjects/loginPage"
 import {ldapConf} from "../pageObjects/ldapAddConfigPage"
 import {ldapTestTool} from "../pageObjects/ldapTesterPage"
 import {removeLdap} from "../pageObjects/removeLdapConfig"
+const mockData =  require("../fixtures/ldapMock");
 
 Cypress.on('uncaught:exception', (err, runnable) => {
   return false
