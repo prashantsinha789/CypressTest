@@ -56,6 +56,5 @@ it('Remove all Ldap configs from SFAdmin',() => {
 it('Verify the Login on Starfish-StageRC',() => {
   login.loginInSFStageRC();
   login.loginClickButtonOnSFUI();
-  cy.url().should('include', mockData.SFDashboard);
 })
 })
