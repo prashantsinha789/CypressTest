@@ -51,7 +51,7 @@ it('Remove all Ldap configs from SFAdmin',() => {
   removeLdap.removeLdapPassword();
   removeLdap.editLocalLogin();
 })
-it.only('Verify the Login on Starfish-StageRC',() => {
+it('Verify the Login on Starfish-StageRC',() => {
   login.loginInSFStageRC();
   login.loginClickButtonOnSFUI();
 })
