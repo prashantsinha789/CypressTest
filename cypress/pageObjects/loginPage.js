@@ -56,10 +56,8 @@ class LoginPage{
   // Login Methods for Starfish UI
     loginInSFStageRC()  {
       cy.visit(mockData.sf_StageRC_Url);
-      cy.clearCache;
+      cy.wait(5000);
       cy.reload();
-      cy.clearCache;
-      cy.wait(20000);
       cy.get('#username').type(mockData.username);
       cy.get('#password').type(mockData.password);
     }
@@ -83,19 +81,18 @@ class LoginPage{
     }
 
 //Login For Ldap testerTools
-    loginInLdapTesterStageRCAdmin(){
+    loginInLdapTesterStageRCAdmin()   {
       cy.visit(mockData.LdapTesterUrl);
       cy.clearCache;
       cy.get('#username').type(mockData.sf_username);
       cy.get('#password').type(mockData.password);
     }
 
-  loginClickButtonOnSFAdmin(){
+  loginClickButtonOnSFAdmin()   {
     cy.get('.btn').click();
   }
-  loginClickButtonOnSFUI(){
+  loginClickButtonOnSFUI()    {
     cy.get('#ext-gen30').click();
-
-}
+  }
 }
 export const login = new LoginPage();

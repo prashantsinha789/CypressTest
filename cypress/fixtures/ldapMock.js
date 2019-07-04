@@ -19,6 +19,7 @@ module.exports.sf_EA_Url="https://ea-qa.starfishsolutions.com/starfish-prod/supp
 module.exports.sf_Ops_Url="https://ops-qa.starfishsolutions.com/starfish-ops/support/login.html";
 
 module.exports.LdapTesterUrl="https://admin-stage-rc.starfishsolutions.com/starfish-admin-stageRC/tools/index.html";
+module.exports.clearCacheSF="https://stage-rc.starfishsolutions.com/starfish-stageRC/console/index.html?tenantId=4";
 
 module.exports.ldapUrl="ldaps://ldap-stagerc.starfishsolutions.com:10202";
 module.exports.ldapServiceUsername="cn=admin,dc=example,dc=org";

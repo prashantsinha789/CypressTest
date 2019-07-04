@@ -38,6 +38,7 @@ it('Verify the Ldap SSO on Starfish-StageRC',() => {
       cy.wait(5000);
       cy.url().should('include', mockData.SFDashboard);
 })
+
 it('Remove all Ldap configs from SFAdmin',() => {
 
   login.loginInStageRC();
@@ -53,8 +54,10 @@ it('Remove all Ldap configs from SFAdmin',() => {
   removeLdap.removeLdapPassword();
   removeLdap.editLocalLogin();
 })
+
 it('Verify the Login on Starfish-StageRC',() => {
   login.loginInSFStageRC();
   login.loginClickButtonOnSFUI();
-})
+
+  })
 })
