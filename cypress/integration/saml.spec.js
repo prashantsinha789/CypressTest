@@ -48,6 +48,6 @@ describe('SAML ConfigFiles Entries in SFAdmin',() =>  {
         // samlConf.clearCacheSF();
         login.loginInSFStageRC();
         login.loginClickButtonOnSFUI();
-        expect(cy.url().should('include', 'tenantId=4'));
+        // expect(cy.url().should('include', 'tenantId=4'));
       })
   })
