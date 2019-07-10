@@ -9,6 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 describe('Ldap ConfigFiles Entries in SFAdmin',() =>  {
+  
     it('Ldap should be acquired on SF',() =>  {
         login.loginInStageRC();
         login.loginClickButtonOnSFAdmin();

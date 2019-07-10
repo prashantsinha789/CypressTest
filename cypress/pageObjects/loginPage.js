@@ -94,5 +94,8 @@ class LoginPage{
   loginClickButtonOnSFUI()    {
     cy.get('#ext-gen30').click();
   }
+  loginClickButtonSaml()  {
+    cy.get('#regularsubmit').click();
+  }
 }
 export const login = new LoginPage();
