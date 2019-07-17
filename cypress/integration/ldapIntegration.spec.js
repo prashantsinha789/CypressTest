@@ -9,7 +9,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 })
 
 describe('Ldap ConfigFiles Entries in SFAdmin',() =>  {
-  
+
     it('Ldap should be acquired on SF',() =>  {
         login.loginInStageRC();
         login.loginClickButtonOnSFAdmin();
@@ -40,7 +40,7 @@ it('Verify the Ldap SSO on Starfish-StageRC',() => {
       cy.url().should('include', mockData.SFDashboard);
 })
 
-it('Remove all Ldap configs from SFAdmin',() => {
+it.only('Remove all Ldap configs from SFAdmin',() => {
 
   login.loginInStageRC();
   login.loginClickButtonOnSFAdmin();
