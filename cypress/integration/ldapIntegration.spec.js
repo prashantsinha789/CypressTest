@@ -40,7 +40,7 @@ it('Verify the Ldap SSO on Starfish-StageRC',() => {
       cy.url().should('include', mockData.SFDashboard);
 })
 
-it.only('Remove all Ldap configs from SFAdmin',() => {
+it('Remove all Ldap configs from SFAdmin',() => {
 
   login.loginInStageRC();
   login.loginClickButtonOnSFAdmin();
