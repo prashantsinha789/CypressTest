@@ -28,7 +28,7 @@ it('Verify the Ldap Setup through Ldap Tester Tools',() => {
     login.loginInLdapTesterStageRCAdmin();
     login.loginClickButtonOnSFAdmin();
     ldapTestTool.testerTools();
-    cy.wait(10000);
+    cy.wait(20000);
 })
 
 it('Verify the Ldap SSO on Starfish-StageRC',() => {
