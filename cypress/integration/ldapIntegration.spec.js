@@ -19,6 +19,7 @@ Cypress.on('uncaught:exception', (err, runnable) => {
 describe('Ldap ConfigFiles Entries in SFAdmin', () => {
 
   it('Ldap should be acquired on SF', () => {
+
     login.loginInStageRC();
     login.loginClickButtonOnSFAdmin();
 
@@ -53,9 +54,27 @@ describe('Ldap ConfigFiles Entries in SFAdmin', () => {
     login.loginInStageRC();
     login.loginClickButtonOnSFAdmin();
     removeLdap.verifyLdapConfig();
-
     /* Removing Ldap Configs from SFAdmin StageRC */
 
+    cy.wait(20000);
+  })
+
+  it('Verify the Ldap SSO on Starfish-StageRC', () => {
+
+    login.loginInSFStageRC();
+    login.loginClickButtonOnSFUI();
+    login.loginInLdapStageRC();
+    login.loginClickButtonOnSFUI();
+    cy.wait(5000);
+    cy.url().should('include', mockData.SFDashboard);
+  })
+
+  it('Remove all Ldap configs from SFAdmin', () => {
+
+    login.loginInStageRC();
+    login.loginClickButtonOnSFAdmin();
+    removeLdap.verifyLdapConfig();
+    /* Removing Ldap Configs from SFAdmin StageRC */
     removeLdap.removeLdapBaseDN();
     removeLdap.removeLdapURL();
     removeLdap.removeLdapUserName();
@@ -67,6 +86,7 @@ describe('Ldap ConfigFiles Entries in SFAdmin', () => {
   it('Verify the Login on Starfish-StageRC', () => {
     login.loginInSFStageRC();
     login.loginClickButtonOnSFUI();
-
+    login.loginInSFStageRC();
+    login.loginClickButtonOnSFUI();
   })
 })

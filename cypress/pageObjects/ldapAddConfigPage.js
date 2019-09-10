@@ -14,7 +14,7 @@ class LdapAddConfig {
     cy.get('.secondary > :nth-child(1) > .ui').click();
     cy.get('.ui > .search').click().type('LDAP_URL');
     cy.get('#value').click();
-    cy.get('#value').type(mockData.ldapUrl);
+    cy.get('#value').type(mockData.ldapUrl);;
     cy.get('.primary').click();
   }
 
