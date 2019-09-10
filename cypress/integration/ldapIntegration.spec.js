@@ -55,26 +55,6 @@ describe('Ldap ConfigFiles Entries in SFAdmin', () => {
     login.loginClickButtonOnSFAdmin();
     removeLdap.verifyLdapConfig();
     /* Removing Ldap Configs from SFAdmin StageRC */
-
-    cy.wait(20000);
-  })
-
-  it('Verify the Ldap SSO on Starfish-StageRC', () => {
-
-    login.loginInSFStageRC();
-    login.loginClickButtonOnSFUI();
-    login.loginInLdapStageRC();
-    login.loginClickButtonOnSFUI();
-    cy.wait(5000);
-    cy.url().should('include', mockData.SFDashboard);
-  })
-
-  it('Remove all Ldap configs from SFAdmin', () => {
-
-    login.loginInStageRC();
-    login.loginClickButtonOnSFAdmin();
-    removeLdap.verifyLdapConfig();
-    /* Removing Ldap Configs from SFAdmin StageRC */
     removeLdap.removeLdapBaseDN();
     removeLdap.removeLdapURL();
     removeLdap.removeLdapUserName();
