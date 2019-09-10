@@ -1,8 +1,8 @@
-const mockData =  require("../fixtures/ldapMock");
+const mockData = require("../fixtures/ldapMock");
 
-class LdapTester    {
+class LdapTester {
 
-  testerTools()   {
+  testerTools() {
     cy.get('tbody > :nth-child(2) > :nth-child(1) > a').click();
     cy.get(':nth-child(1) > .field > .ui > input').click();
     cy.get(':nth-child(1) > .field > .ui > input').type("4");
