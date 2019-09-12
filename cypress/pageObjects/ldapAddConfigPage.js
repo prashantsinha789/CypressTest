@@ -12,7 +12,7 @@ class LdapAddConfig {
 
   setLdapUrl() {
     cy.get('.secondary > :nth-child(1) > .ui').click();
-    cy.get('.ui > .search').click().type('LDAP_URL');
+    cy.get('.ui > .search').click({force:true}).type('LDAP_URL');
     cy.get('#value').click();
     cy.get('#value').type(mockData.ldapUrl);;
     cy.get('.primary').click();
@@ -20,7 +20,7 @@ class LdapAddConfig {
 
   setLdapServiceUsername() {
     cy.get('.secondary > :nth-child(1) > .ui').click();
-    cy.get('.ui > .search').click().type('LDAP_SERVICE_USERNAME');
+    cy.get('.ui > .search').click({force:true}).type('LDAP_SERVICE_USERNAME');
     cy.get('#value').click();
     cy.get('#value').type(mockData.ldapServiceUsername);
     cy.get('.primary').click();
@@ -28,7 +28,7 @@ class LdapAddConfig {
 
   setLdapPassword() {
     cy.get('.secondary > :nth-child(1) > .ui').click();
-    cy.get('.ui > .search').click().type('LDAP_SERVICE_PASSWORD');
+    cy.get('.ui > .search').click({force:true}).type('LDAP_SERVICE_PASSWORD');
     cy.get('#value').click();
     cy.get('#value').type(mockData.ldapServicePassword);
     cy.get('.primary').click();
@@ -36,7 +36,7 @@ class LdapAddConfig {
 
   setLdapBaseDN() {
     cy.get('.secondary > :nth-child(1) > .ui').click();
-    cy.get('.ui > .search').click().type('LDAP_BASE_DN');
+    cy.get('.ui > .search').click({force:true}).type('LDAP_BASE_DN');
     cy.get('#value').click();
     cy.get('#value').type(mockData.ldapbasedn);
     cy.get('.primary').click();
@@ -44,7 +44,7 @@ class LdapAddConfig {
 
   setLdapFilter() {
     cy.get('.secondary > :nth-child(1) > .ui').click();
-    cy.get('.ui > .search').click().type('LDAP_FILTER');
+    cy.get('.ui > .search').click({force:true}).type('LDAP_FILTER');
     cy.get('#value').click();
     cy.get('#value').type(mockData.ldapFilter);
     cy.get('.primary').click();
